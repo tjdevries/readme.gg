@@ -21,8 +21,8 @@ const Home: NextPage = () => {
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         {/*<Image src="/readme.icon.png" alt="Readme Logo (to be replaced)" height={768} width={768} />*/}
 
-        <div className="h-[800px] w-[800px] bg-[url('/readme.icon.png')] bg-no-repeat bg-cover relative">
-          <div className="absolute left-[216px] top-[163px] w-[367px] h-[255px] pb-0 bg-black pt-[30px] pb-[30px]">
+        <div className="w-[400px] h-[400px] md:h-[800px] md:w-[800px] bg-[url('/readme.icon.png')] bg-no-repeat bg-cover relative">
+          <div className="absolute top-[68px] left-[106px] w-[188px] h-[153px] md:left-[216px] md:top-[163px] md:w-[367px] md:h-[255px] pb-0 bg-black pt-[30px] pb-[30px]">
            <iframe 
              className="w-full h-full"
              width="560"
@@ -33,8 +33,8 @@ const Home: NextPage = () => {
              allowFullScreen
              ></iframe>
           </div>
-          <span className="absolute top-[523px] left-[308px] text-black font-mono">Ready to get started?</span>
-          <Link className="absolute top-[561px] left-[313px] border rounded bg-[#5865F2] hover:opacity-50 p-4 font-mono font-bold" href="https://discord.gg/V4G58hPdPj" target="_blank">Join the Discord</Link>
+          <span className="absolute top-[258px] left-[93px] md:top-[523px] md:left-[308px] text-black font-mono">Ready to get started?</span>
+          <Link className="absolute top-[395px] left-[102px] md:top-[561px] md:left-[313px] border rounded bg-[#5865F2] hover:opacity-50 p-4 font-mono font-bold" href="https://discord.gg/V4G58hPdPj" target="_blank">Join the Discord</Link>
         </div>
         {/*<h2 className="text-4xl mt-4 mb-4 font-mono">Announcement Video is Live!</h2>*/}
 
