@@ -1,0 +1,34 @@
+{
+	"pageTitle": "README - The software developer book club",
+	"computerYouTube": "https://www.youtube.com/embed/crk0t5j3icg",
+	"subText": "Ready to get started?",
+	"callToAction": "Join the Discord",
+	"book": {
+		"image": "/seven_languages_seven_weeks.jpg",
+		"purchaseLinks": [
+			{ "label": "The Pragmatic Bookshelf", "url": "https://pragprog.com/titles/btlang/seven-languages-in-seven-weeks/" },
+			{ "label": "Amazon", "url": "https://www.amazon.com/Seven-Languages-Weeks-Programming-Programmers/dp/193435659X" },
+			{ "label": "AbeBooks", "url": "https://www.abebooks.com/9781934356593/Seven-Languages-Weeks-Pragmatic-Guide-193435659X/plp" }
+		]
+	},
+	"hosts": [
+		{
+			"name": "teej_dv",
+			"image": "/teej_dv.jpeg",
+			"bio": "🔭 I’m the author of telescope.nvim. A core contributor to Neovim. Primarily focused on Iitegrating Lua into Neovim, the built-in LSP client and I wrote my own (WIP) transpiler for vim9script vim9jit.",
+			"twitch": "https://www.twitch.tv/teej_dv",
+			"twitter": "https://twitter.com/teej_dv",
+			"youtube": "https://www.youtube.com/c/TjDeVries",
+			"github": "https://github.com/tjdevries"
+		},
+		{
+			"name": "bashbunni",
+			"image": "/bashbunni.jpeg",
+			"bio": "I'm a software developer and content creator who builds mostly with Go. I do developer relations at @charmcli which is top tier ~fabulous~. I hack on open source projects (my own, Charm's, and others) in public on my Twitch channel. I also have a YouTube channel where I post more curated content on what I'm learning. I love long form content because I resent how social media platforms can feel like a highlight reel of people's lives, when in reality, we all struggle, especially when coding (heh).",
+			"twitch": "https://www.twitch.tv/bashbunni",
+			"twitter": "https://twitter.com/sudobunni",
+			"youtube": "https://www.youtube.com/bashbunni",
+			"github": "https://github.com/bashbunni"
+		}
+	]
+}
