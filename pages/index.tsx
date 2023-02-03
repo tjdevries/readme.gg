@@ -52,7 +52,7 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <div className="flex flex-col xl:flex-row items-center justify-center">
+      <div className="flex flex-col xl:flex-row flex-wrap items-center justify-center">
         <main className="flex w-full xl:basis-1/2 flex-1 flex-col items-center justify-center px-20 md:px-0 text-center min-h-screen">
           <div className="w-[400px] h-[400px] md:h-[800px] md:w-[800px] bg-[url('/readme.icon.png')] bg-no-repeat bg-cover relative">
             <div className="absolute top-[68px] left-[106px] w-[188px] h-[153px] md:left-[216px] md:top-[163px] md:w-[367px] md:h-[255px] pb-0 bg-black pt-[30px] pb-[30px]">
@@ -84,36 +84,38 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
               }
             </ul>
           </div>
-          {/*<div className="flex flex-col mx-4">*/}
-          {/* TO BE ADDED IN WHEN ALL HOST INFORMATION IS OBTAINED */}
-          {/*<HostsHeader />*/}
-          {/*
-            content.hosts && content.hosts.map((host) => (
-              <div className="flex flex-row mb-8">
-                <div className="flex-1 p-4 mr-4">
-                  <div>{host.bio}</div>
-                  <span className="relative">
-                    <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.twitter}>Twitter</Link>
-                    &nbsp;|&nbsp;
-                    <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.twitch}>Twitch</Link>
-                    &nbsp;|&nbsp;
-                    <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.github}>GitHub</Link>
-                    &nbsp;|&nbsp;
-                    <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.youtube}>YouTube</Link>
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex flex-col grow-0 justify-center items-center border-1 border-gray-800 bg-neutral-200 rotate-[5deg]">
-                    <div className="relative bg-black h-36 w-36 border-neutral-200 border-[12px]">
-                      <Image src={host.image} fill className="w-full h-full" alt={`A photo of ${host.name}`} />
+        </main>
+        <main className="min-h-screen w-full xl:basis-1/2 flex flex-col justify-around xl:items-center">
+          <div className="flex flex-col mx-4">
+            {/* TO BE ADDED IN WHEN ALL HOST INFORMATION IS OBTAINED */}
+            <HostsHeader />
+            {
+              content.hosts && content.hosts.map((host) => (
+                <div className="flex flex-row mb-8">
+                  <div className="flex-1 p-4 mr-4">
+                    <div>{host.bio}</div>
+                    <span className="relative">
+                      <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.twitter}>Twitter</Link>
+                      &nbsp;|&nbsp;
+                      <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.twitch}>Twitch</Link>
+                      &nbsp;|&nbsp;
+                      <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.github}>GitHub</Link>
+                      &nbsp;|&nbsp;
+                      <Link className="hover:underline text-[#F1005A]" target="_blank" href={host.youtube}>YouTube</Link>
+                    </span>
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="flex flex-col grow-0 justify-center items-center border-1 border-gray-800 bg-neutral-200">
+                      <div className="relative bg-black h-36 w-36 border-neutral-200 border-[12px]">
+                        <Image src={host.image} fill className="w-full h-full" alt={`A photo of ${host.name}`} />
+                      </div>
+                      <div className="text-black font-mono pb-1">{host.name}</div>
                     </div>
-                    <div className="text-black font-mono pb-1">{host.name}</div>
                   </div>
                 </div>
-              </div>
-            ))
-          */}
-          {/*</div>*/}
+              ))
+            }
+          </div>
         </main>
       </div>
       <footer className="flex w-full items-center justify-center">
