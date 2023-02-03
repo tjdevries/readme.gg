@@ -7,6 +7,7 @@ const BookHeader = () => {
       width="395"
       height="85"
       viewBox="0 0 395 85"
+      aria-label="ASCII Art header that says 'The Book'"
     >
       <text
         fontFamily="'Open Sans', sans-serif"

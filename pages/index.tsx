@@ -52,38 +52,39 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center min-h-screen">
-        <div className="w-[400px] h-[400px] md:h-[800px] md:w-[800px] bg-[url('/readme.icon.png')] bg-no-repeat bg-cover relative">
-          <div className="absolute top-[68px] left-[106px] w-[188px] h-[153px] md:left-[216px] md:top-[163px] md:w-[367px] md:h-[255px] pb-0 bg-black pt-[30px] pb-[30px]">
-            <iframe
-              className="w-full h-full"
-              width="560"
-              height="315"
-              src={content.computerYouTube}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+      <div className="flex flex-col xl:flex-row items-center justify-center">
+        <main className="flex w-full xl:basis-1/2 flex-1 flex-col items-center justify-center px-20 md:px-0 text-center min-h-screen">
+          <div className="w-[400px] h-[400px] md:h-[800px] md:w-[800px] bg-[url('/readme.icon.png')] bg-no-repeat bg-cover relative">
+            <div className="absolute top-[68px] left-[106px] w-[188px] h-[153px] md:left-[216px] md:top-[163px] md:w-[367px] md:h-[255px] pb-0 bg-black pt-[30px] pb-[30px]">
+              <iframe
+                className="w-full h-full"
+                width="560"
+                height="315"
+                src={content.computerYouTube}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <span className="absolute top-[258px] md:top-[523px] left-[50%] -translate-x-[50%] text-black font-mono">{content.subText}</span>
+            <Link className="absolute top-[395px] md:top-[561px] left-[50%] -translate-x-[50%] border rounded bg-[#5865F2] hover:opacity-50 p-4 font-mono font-bold" href="https://discord.gg/V4G58hPdPj" target="_blank">{content.callToAction}</Link>
           </div>
-          <span className="absolute top-[258px] md:top-[523px] left-[50%] -translate-x-[50%] text-black font-mono">{content.subText}</span>
-          <Link className="absolute top-[395px] md:top-[561px] left-[50%] -translate-x-[50%] border rounded bg-[#5865F2] hover:opacity-50 p-4 font-mono font-bold" href="https://discord.gg/V4G58hPdPj" target="_blank">{content.callToAction}</Link>
-        </div>
-      </main>
+        </main>
 
-      <main className="min-h-screen w-full flex flex-col md:flex-row justify-around">
-        <div className="flex flex-col mx-4 items-center shrink-0">
-          <BookHeader />
-          <Image src={content.book.image} className="pb-4 px-4" height={518} width={432} alt="Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages" />
-          <h3 className="text-xl font-mono">Available for Purchase:</h3>
-          <ul>
-            {content.book.purchaseLinks && content.book.purchaseLinks.map(
-              (link) => (<li className="p-2 font-bold text-[#F1005A] hover:underline"><Link href={link.url}>{link.label}</Link></li>)
-            )
-            }
-          </ul>
-        </div>
-        {/*<div className="flex flex-col mx-4">*/}
+        <main className="min-h-screen w-full xl:basis-1/2 flex flex-col xl:flex-row justify-around xl:items-center">
+          <div className="flex flex-col mx-4 items-center shrink-0">
+            <BookHeader />
+            <Image src={content.book.image} className="pb-4 px-4" height={518} width={432} alt="Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages" />
+            <h2 className="text-xl font-mono">Available for Purchase:</h2>
+            <span className="text-sm">Use code <span className="bg-black rounded text-green-500 p-1">READMESEVEN</span> for 30% off at The Pragmatic Bookshelf</span>
+            <ul>
+              {content.book.purchaseLinks && content.book.purchaseLinks.map(
+                (link) => (<li className="p-2 font-bold text-[#F1005A] hover:underline"><Link href={link.url}>{link.label}</Link></li>)
+              )
+              }
+            </ul>
+          </div>
+          {/*<div className="flex flex-col mx-4">*/}
           {/* TO BE ADDED IN WHEN ALL HOST INFORMATION IS OBTAINED */}
           {/*<HostsHeader />*/}
           {/*
@@ -112,9 +113,9 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
               </div>
             ))
           */}
-        {/*</div>*/}
-      </main>
-
+          {/*</div>*/}
+        </main>
+      </div>
       <footer className="flex w-full items-center justify-center">
         <p className="opacity-70">Lovingly made with Tailwind. (Don't @ me)</p>
       </footer>
