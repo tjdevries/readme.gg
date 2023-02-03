@@ -79,7 +79,7 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
             <span className="text-sm">Use code <span className="bg-black rounded text-green-500 p-1">READMESEVEN</span> for 30% off at The Pragmatic Bookshelf</span>
             <ul>
               {content.book.purchaseLinks && content.book.purchaseLinks.map(
-                (link) => (<li className="p-2 font-bold text-[#F1005A] hover:underline"><Link href={link.url}>{link.label}</Link></li>)
+                (link) => (<li className="p-2 font-bold text-[#F1005A] hover:underline" key={link.label}><Link href={link.url}>{link.label}</Link></li>)
               )
               }
             </ul>
