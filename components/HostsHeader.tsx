@@ -4,7 +4,7 @@ const HostsHeader = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="490"
+      width="400"
       height="85"
       viewBox="0 0 490 85"
     >
