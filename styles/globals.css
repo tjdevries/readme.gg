@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.blinking-cursor {
+	color: #FFFFFF;
+	background-color: transparent;
+	font-size: 32px;
+	font-weight: bold;
+	animation: blinkingCursor 1s infinite;
+}
+
+@keyframes blinkingCursor {
+	0%, 49% { color: #000000; background-color: #FFFFFF; }
+	50%, 100% { color: #FFFFFF; background-color: transparent; }
+}

@@ -7,6 +7,7 @@ const HostsHeader = () => {
       width="400"
       height="85"
       viewBox="0 0 490 85"
+      className="sm:w-[490px]"
     >
       <text
         fontFamily="'Open Sans', sans-serif"

@@ -39,6 +39,32 @@ interface MainPage {
   },
 }
 
+const bookClubDates = [
+  new Date('17 February 2023 05:00 UTC'),
+  new Date('03 March 2023 05:00 UTC'),
+  new Date('17 March 2023 05:00 UTC'),
+  new Date('31 March 2023 05:00 UTC'),
+  new Date('14 April 2023 05:00 UTC'),
+  new Date('28 April 2023 05:00 UTC'),
+];
+
+const getNextClub = () => {
+  const today = new Date();
+
+  // Short circuit, if none of the listed dates have passed
+  if (today < bookClubDates[0] ) {
+    return bookClubDates[0];
+  }
+
+  for (let i = 1; i < bookClubDates.length; i++) {
+    if ( today > bookClubDates[i-1] && today < bookClubDates[i] ) {
+      return bookClubDates[i];
+    }
+  }
+};
+
+getNextClub();
+
 const Home: NextPage<MainPage> = ({ content }: MainPage) => {
   return (
     <div className="flex flex-col items-center justify-center
@@ -71,7 +97,7 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
           </div>
         </main>
 
-        <main className="min-h-screen flex flex-col xl:flex-row justify-around xl:items-center">
+        <main className="min-h-screen flex flex-col xl:flex-row xl:items-center">
           <div className="flex flex-col md:mx-4 items-center shrink-0">
             <BookHeader />
             <Image src={content.book.image} className="pb-4 px-4" height={518} width={432} alt="Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages" />
@@ -85,13 +111,12 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
             </ul>
           </div>
         </main>
-        <main className="min-h-screen flex flex-col justify-around xl:items-center">
+        <main className="min-h-screen flex flex-col sm:basis-1/2 2xl:basis-1/3 xl:justify-around xl:items-center">
           <div className="flex flex-col">
-            {/* TO BE ADDED IN WHEN ALL HOST INFORMATION IS OBTAINED */}
             <HostsHeader />
             {
               content.hosts && content.hosts.map((host) => (
-                <div className="flex flex-col md:flex-row mb-8">
+                <div className="flex flex-col sm:flex-row mb-8">
                   <div className="p-4 md:px-4 md:py-0 md:mr-4">
                     <div>{host.bio}</div>
                     <span className="relative">
