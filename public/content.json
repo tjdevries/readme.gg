@@ -29,6 +29,15 @@
 			"twitter": "https://twitter.com/sudobunni",
 			"youtube": "https://www.youtube.com/bashbunni",
 			"github": "https://github.com/bashbunni"
+		},
+		{
+			"name": "beginbot",
+			"image": "/beginbot.png",
+			"bio": "Programmer/Streamer, Art/Music obsessed. Mostly not serious, unless talking jokes. Host of @irl_alpha live in Venice, CA every thursday.",
+			"twitch": "https://www.twitch.tv/beginbot",
+			"twitter": "https://twitter.com/beginbotbot",
+			"youtube": "https://www.youtube.com/@beginbot",
+			"github": "https://github.com/davidbegin"
 		}
 	]
 }
