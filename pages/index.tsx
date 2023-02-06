@@ -97,7 +97,7 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
           </div>
         </main>
 
-        <main className="min-h-screen flex flex-col xl:flex-row xl:items-center">
+        <main className="min-h-screen flex flex-col xl:flex-row xl:justify-start xl:items-start xl:pt-[80px]">
           <div className="flex flex-col md:mx-4 items-center shrink-0">
             <BookHeader />
             <Image src={content.book.image} className="pb-4 px-4" height={518} width={432} alt="Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages" />
@@ -111,7 +111,7 @@ const Home: NextPage<MainPage> = ({ content }: MainPage) => {
             </ul>
           </div>
         </main>
-        <main className="min-h-screen flex flex-col sm:basis-1/2 2xl:basis-1/3 xl:justify-around xl:items-center">
+        <main className="min-h-screen flex flex-col sm:basis-1/2 2xl:basis-1/3 xl:justify-start xl:items-start xl:pt-[80px]">
           <div className="flex flex-col">
             <HostsHeader />
             {
